@@ -1,31 +1,15 @@
-
-import { Navigate, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Counter from "./app/features/counter/Counter";
-import AddPostForm from "./app/features/posts/AddPostForm";
-import PostsList from "./app/features/posts/Postslist";
-import SinglePostPage from "./app/features/posts/SinglePostPage";
+import PostsList from "./features/posts/PostsList";
+import AddPostForm from "./features/posts/AddPostForm";
+import SinglePostPage from "./features/posts/SinglePostPage";
+import EditPostForm from "./features/posts/EditPostForm";
+import UsersList from "./features/users/UsersList";
+import UserPage from './features/users/UserPage';
 import Layout from "./components/Layout";
-import EditPostForm from "./app/features/posts/EditPostForm";
-import UsersList from "./app/features/users/UserList";
-import UserPage from "./app/features/users/UserPage";
-
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
-
-
-
-  return <>
-
-{/* <main>
-  <Counter/>
-
-  <AddPostForm/>
-<PostsList/>
-
-</main> */}
-
-<Routes>
+  return (
+    <Routes>
       <Route path="/" element={<Layout />}>
 
         <Route index element={<PostsList />} />
@@ -46,10 +30,7 @@ function App() {
 
       </Route>
     </Routes>
-
-
-
-  </>;
+  );
 }
 
 export default App;
